@@ -17,6 +17,9 @@ app.use(express.static(path.join(__dirname, '../dist/portfolio-two')));
 app.use(cors());
 
 app.use('/api/', usersRouter);
+app.use('*',(req,res)=>{
+    res.sendFile(path.join(__dirname, '../dist/portfolio-two/index.html'))
+})
 
 
 module.exports = app;
