@@ -13,13 +13,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../dist/portfolio-two')));
+app.use(express.static(path.join(__dirname, '../dist/portfolio-two/index.html')));
 app.use(cors());
 
 app.use('/api/', usersRouter);
-app.use('*',(req,res)=>{
-    res.sendFile(path.join(__dirname, '../dist/portfolio-two/index.html'))
-})
+// app.use('*',(req,res)=>{
+//     res.sendFile(path.join(__dirname, '../dist/portfolio-two/index.html'))
+// })
 
 
 module.exports = app;
