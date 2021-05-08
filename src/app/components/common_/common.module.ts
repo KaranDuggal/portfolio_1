@@ -12,7 +12,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     CommonModule
   ],
   exports:[
-    
+    NavBarComponent
   ]
 })
 export class Common_Module { }
